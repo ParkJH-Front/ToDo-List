@@ -7,6 +7,7 @@ const images = [
 const bgImg = document.querySelector(".bgImgs")
 const choiceImage = images[Math.floor(Math.random() * images.length)]
 const randomImage = document.createElement("img")
+
 randomImage.src = `img/${choiceImage}`
 bgImg.appendChild(randomImage)
 
