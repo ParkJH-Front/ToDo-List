@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>제목 뭐라고 하싈?</title>
+</head>
+<body>
+<div class="bgImgs">
+  <!-- 로그인 페이지 -->
+  <form id="worldForm">
+    <h1 id="worldInfo">Enter World Name:</h1>
+    <input 
+      required
+      type="text" 
+      placeholder="create your world!">
+    <br>
+    <input type="submit" value="submit!" />
+  </form>
+  <form id="characterForm" class="hidden">
+    <h1 id="characterInfo">Enter character Name:</h1>
+    <input 
+      required
+      type="text" 
+      placeholder="create your character!" />
+    <br>
+    <input type="submit" value="submit!">
+  </form>
+  <!-- 인사말 -->
+  <h1 id="greeting" class="hidden">wellcome</h1>
+  <!--시간  -->
+  <h1 id="clock" class="hidden">00:00:00</h1>
+  <!-- 명언_랜덤값 -->
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+  <!--todo_list -->
+  <form id="todo-form">
+    <input
+      required 
+      type="text" 
+      placeholder="todo wright" />
+  </form>
+  <ul id="todo-list"></ul>
+  <!-- 날씨 API 연동 -->
+  <div id="weather">
+    <span></span>
+    <span></span>
+  </div>
+</div>
+  <!-- js 코드 -->
+  <script src="js/greeting.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/bgimgs.js"></script>
+  <script src="js/todo.js"></script>
+  <!-- <script src="js/weather.js"></script> -->
+</body>
+</html>

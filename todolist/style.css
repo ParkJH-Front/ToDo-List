@@ -1,0 +1,25 @@
+.hidden {
+    display: none;
+}
+
+/* 폰트 적용 */
+@font-face {
+    font-family: TFONT;
+    src:url("font/ANDYB.TTF") format("truetype");
+}
+
+body {
+    font-family: TFONT;
+}
+
+div.bgImgs {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    z-index: -1;
+}
+
+div.bgImgs > img {
+    width: 100%;
+}
