@@ -12,14 +12,22 @@ body {
     font-family: TFONT;
 }
 
-div.bgImgs {
-    width: 100%;
-    height: 100%;
-    float: left;
-    position: fixed;
-    z-index: -1;
+/* todu-box 제작 */
+#todo-box {
+    background-color: rgba(54, 138, 138, 0.651);
+
+    border-style: solid;
+    border-width: medium;
+    border-color: rgba(0, 0, 0, 0.384);
+    border-radius: 20px;
+
+    padding: 20px 10px 20px 10px;
 }
 
-div.bgImgs > img {
+.bgImgs {
+    background-image: url("img/bgimg_2.png");
+    opacity: 0.5;
     width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;    
 }
