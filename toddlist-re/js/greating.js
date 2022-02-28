@@ -1,23 +1,33 @@
-const loginForm = document.getElementById("loginForm");
-const loginInput = document.getElementById("loginInput");
+const loginForm = document.getElementById("loginForm")
+const loginInput = document.getElementById("loginInput")
 const greeting = document.getElementById("greeting")
 
 const HIDDEN = "hidden"
 const USERNAME = "userName"
 
-
-// 함수 실행 시 입력값을 localStorage 내 저장
+// 함수 실행 시 입력값을 localStorage 내 저장 로직
 function loginHandler(event) {
-    event.preventDefault();
-    const loginID = loginInput.value;
-    loginInput.value = "";
-    localStorage.setItem(USERNAME, loginID);
-    
-    loginForm.classList.add(HIDDEN);
-    greeting.classList.remove(HIDDEN);
-    greeting.innerText = `Hello ~ ${loginID} Have a Nice Day ★`;
+    event.preventDefault()
+    const loginID = loginInput.value
+    loginInput.value = ""
+    localStorage.setItem(USERNAME, loginID)
+
+    loginForm.classList.add(HIDDEN)
+    loginFormHandler(loginID)
 };
 
-const checkUserName = localStorage.getItem(USERNAME);
+// 인사 문구 출력 로직
+function loginFormHandler(USERID) {
+    greeting.classList.remove(HIDDEN)
+    greeting.innerText = `Hello ~ ${USERID} Have a Nice Day ★`
+}
 
-loginForm.addEventListener("submit", loginHandler);
+const checkUserName = localStorage.getItem(USERNAME)
+
+// localStorage 내 값 검증을 통해 loginForm 출력 및 Handler 동작 결정 로직
+if (checkUserName !== null) {
+    loginForm.classList.add(HIDDEN)
+    loginFormHandler(checkUserName)
+} else {
+    loginForm.addEventListener("submit", loginHandler)
+}

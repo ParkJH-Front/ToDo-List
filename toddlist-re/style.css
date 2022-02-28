@@ -2,3 +2,33 @@
     display: none;
 }
 
+/* 배경 이미지 속성 */
+.bgImg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(113, 173, 33)
+}
+
+.greeting {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0)
+}
+
+#clockBox {
+    color: tomato;
+}
