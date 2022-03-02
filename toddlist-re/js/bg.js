@@ -11,7 +11,7 @@ function choiceImg(randomNum) {
     img.classList.add("bgImg")
 
     //body 내 이미지 삽입
-    body.prepend(img)
+    body.appendChild(img)
 }
 
 // 랜덤값을 선택하여 choiceImg 으로 전달하는 로직
