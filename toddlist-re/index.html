@@ -5,50 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <title>ToDo-List</title>
 </head>
 <body>
-    <!-- 로그인 폼 -->
-    <form id="loginForm">
-        <input 
-            id="loginInput"
-            type="text"
-            placeholder="Enter Your Name"
-            required
-        >
-        <input type="submit" value="submit!">
-    </form>
+    <section class="bgimg container py-5 h-100" >
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <div class="card-body p-4"></div>
+                    <!-- 로그인 폼 -->
+                    <form id="loginForm">
+                        <input 
+                            id="loginInput"
+                            type="text"
+                            placeholder="Enter Your Name"
+                            required
+                        >
+                        <input type="submit" value="submit!">
+                    </form>
 
-    <!-- 인사말 -->
-    <h1 id="greeting" class="greeting"></h1>
-    
-    <!-- 시간 -->
-    <div id="clockBox">
-        <h2 id="toDay">0000.00.00</h2>
-        <h2 id="clock">00:00:00</h2>
-    </div>
+                    <!-- 인사말 -->
+                    <p id="greeting" class="greeting h2 me-2 mb-2"></p>
+                    <span class="badge bg-danger">checklist</span> <!-- 로그인 이후 출력되도록 설정 필요 -->
 
-    <!-- 안내문 -->
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
-    
-    <!-- 메인 컨텐츠 (todo-list) -->
-    <form id="todo-form">
-        <input 
-            type="text"
-            required
-            id = "todoInput"        
-        >
-        <!-- <input type="submit" value="저장"> -->
-    </form>
-    <ul id="todo-list"></ul>
+                    <!-- 시간 -->
+                    <div id="clockBox" class="text-muted pb-2">
+                        <h2 id="toDay">0000.00.00</h2>
+                        <h2 id="clock">00:00:00</h2>
+                    </div>
+
+                    <!-- 안내문 -->
+                    <div id="quote" class="divider d-flex align-items-center my-4">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+                    <!-- 메인 컨텐츠 (todo-list) -->
+                    <form id="todo-form">
+                        <input 
+                            type="text"
+                            required
+                            id = "todoInput"        
+                        >
+                        <!-- <input type="submit" value="저장"> -->
+                    </form>
+                    <ul id="todo-list" class="list-group rounded-0"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <script src="js/greating.js"></script>
     <script src="js/bg.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/todo-list.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    
 </body>
 </html>

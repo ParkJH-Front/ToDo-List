@@ -13,22 +13,26 @@
     z-index: -1;
 }
 
-#loginForm {
+/* #loginForm {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(113, 173, 33)
-}
+} */
 
-.greeting {
+/* .greeting {
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(0, 0, 0)
-}
+} */
 
-#clockBox {
-    color: tomato;
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
 }
