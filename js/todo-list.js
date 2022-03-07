@@ -35,7 +35,7 @@ function paintTodo(todoObj) {
     todospan.innerText = `${todoObj.text}  `;
     
     const todoBtn = document.createElement("button");
-    todoBtn.innerHTML = "delect";
+    todoBtn.innerHTML = "delete";
     todoBtn.className = "btn btn-danger btn-sm"
     todoBtn.addEventListener("click", deleteTodo);
 
