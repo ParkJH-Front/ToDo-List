@@ -1,5 +1,4 @@
 const clockBox = document.getElementById("colckBox")
-const fullDay = document.getElementById("toDay")
 const fullTime = document.getElementById("clock")
 
 function toDay() {
@@ -13,8 +12,7 @@ function toDay() {
     const min = String(time.getMinutes()).padStart(2, 0)
     const sec = String(time.getSeconds()).padStart(2, 0)
     
-    fullDay.innerText = `년 :${year}, 월 :${mon}, 일 :${day}`
-    fullTime.innerText = `시 :${Hour}, 분 :${min}, 초 :${sec}`
+    fullTime.innerText = `${year}.${mon}.${day}  ${Hour}:${min}:${sec}`
 }
 
 toDay()

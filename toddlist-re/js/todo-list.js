@@ -25,7 +25,7 @@ function todoHandler(event) {
 
 function paintTodo(todoObj) {
     const todoli = document.createElement("li");
-    todoli.className = "list-group-item border-0 d-flex align-items-center ps-0"
+    todoli.className = "list-group-item border-0"
     todoli.id = todoObj.id;
     
     const todospan = document.createElement("span");
@@ -48,7 +48,7 @@ function deleteTodo(event) {
     li.remove();
     // console.log(typeof li.id)
     // console.log(typeof todoArray.pop().id)
-    todoArray = todoArray.filter((todo) => todo.id !== String(li.id));
+    todoArray = todoArray.filter((todo) => String(todo.id) !== String(li.id));
     saveTodo();
 }
 

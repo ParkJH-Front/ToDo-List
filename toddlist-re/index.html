@@ -10,48 +10,66 @@
     <title>ToDo-List</title>
 </head>
 <body>
-    <section class="bgimg container py-5 h-100" >
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col col-lg-8 col-xl-6">
-                <div class="card rounded-3">
-                    <div class="card-body p-4"></div>
-                    <!-- 로그인 폼 -->
-                    <form id="loginForm">
-                        <input 
-                            id="loginInput"
-                            type="text"
-                            placeholder="Enter Your Name"
-                            required
-                        >
-                        <input type="submit" value="submit!">
-                    </form>
+    <section class="bgimg" >
+        <div class="vh-100 container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-8 col-xl-6">
+                    <div class="card rounded-3">
+                        <div class="card-body p-4">
+                            <!-- 로그인 폼 -->
+                            <form id="loginForm">
+                                <div class="input-group mb-3">
+                                    <input 
+                                    id="loginInput",
+                                    type="text",
+                                    placeholder="Enter Your Name",
+                                    required
+                                    class="form-control"
+                                    >
+                                    <input type="submit" value="submit!" class="btn btn-success">
+                                </div>
+                            </form>
+                                <!-- 인사말 -->
+                                <p id="greeting" class="h2 fw-bold"></p>
+                                
+                                <div id="clockBox" class="text-muted pb-2">
+                                    <h2 id="clock" class="fs-6">0000.00.00</h2>
+                                </div>
 
-                    <!-- 인사말 -->
-                    <p id="greeting" class="greeting h2 me-2 mb-2"></p>
-                    <span class="badge bg-danger">checklist</span> <!-- 로그인 이후 출력되도록 설정 필요 -->
+                            <div id="contents" class="hidden">
+                                <!-- 시간 -->
 
-                    <!-- 시간 -->
-                    <div id="clockBox" class="text-muted pb-2">
-                        <h2 id="toDay">0000.00.00</h2>
-                        <h2 id="clock">00:00:00</h2>
+                                <!-- 안내문 -->
+                                <div id="quote" class="divider d-flex align-items-center">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                
+                                <!-- 메인 컨텐츠 (todo-list) -->
+                                <form id="todo-form" class="todoForm">
+                                    <div class="input-group mb-3">
+                                        <input
+                                            type="text"
+                                            required
+                                            id = "todoInput" 
+                                            class="form-control"
+                                            placeholder="let`s todo~!"  
+                                        >
+                                        <input type="submit" value="save" size="40" class="btn btn-success">
+                                    </div>
+                                </form>
+                                <ul id="todo-list" class=></ul>
+
+                                <div class="divider d-flex align-items-center my-4">
+                                    <p class="text-center mx-3 mb-0">Today weather :</p>
+                                    <div id="weather">
+                                        <span></span>
+                                        <span></span>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- 안내문 -->
-                    <div id="quote" class="divider d-flex align-items-center my-4">
-                        <span></span>
-                        <span></span>
-                    </div>
-                    
-                    <!-- 메인 컨텐츠 (todo-list) -->
-                    <form id="todo-form">
-                        <input 
-                            type="text"
-                            required
-                            id = "todoInput"        
-                        >
-                        <!-- <input type="submit" value="저장"> -->
-                    </form>
-                    <ul id="todo-list" class="list-group rounded-0"></ul>
                 </div>
             </div>
         </div>
@@ -62,6 +80,7 @@
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/todo-list.js"></script>
+    <script src="js/weather.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>

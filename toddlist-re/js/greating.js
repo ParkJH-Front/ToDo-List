@@ -1,6 +1,7 @@
 const loginForm = document.getElementById("loginForm")
 const loginInput = document.getElementById("loginInput")
 const greeting = document.getElementById("greeting")
+const contents = document.getElementById("contents")
 
 const HIDDEN = "hidden"
 const USERNAME = "userName"
@@ -16,10 +17,11 @@ function loginHandler(event) {
     loginFormHandler(loginID)
 };
 
-// 인사 문구 출력 로직
+// 인사 문구 출력 로직s
 function loginFormHandler(USERID) {
     greeting.classList.remove(HIDDEN)
-    greeting.innerText = `Hello ~ ${USERID} Have a Nice Day ★`
+    contents.classList.remove(HIDDEN)
+    greeting.innerText = `HI ${USERID}, Check TodoList`
 }
 
 const checkUserName = localStorage.getItem(USERNAME)
@@ -27,6 +29,7 @@ const checkUserName = localStorage.getItem(USERNAME)
 // localStorage 내 값 검증을 통해 loginForm 출력 및 Handler 동작 결정 로직
 if (checkUserName !== null) {
     loginForm.classList.add(HIDDEN)
+    contents.classList.add(HIDDEN)
     loginFormHandler(checkUserName)
 } else {
     loginForm.addEventListener("submit", loginHandler)
