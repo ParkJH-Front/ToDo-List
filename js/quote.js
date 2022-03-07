@@ -41,13 +41,16 @@ const quoteBox = document.querySelector("#quote")
 const quote = document.querySelector("#quote span:first-child")
 const author = document.querySelector("#quote span:last-child")
 
+// 랜덤 명언을 뽑아서 각 span 요소에 전달하는 로직
 function getRandomQuote() {
+    //랜덤값을 뽑는 변수 Math.floor 통해 소숫점을 반올림한다.
     const toDayQuote = quotes[Math.floor(Math.random() * quotes.length)]
     quote.innerText = toDayQuote.quote
     author.innerText = toDayQuote.author
 }
 
 getRandomQuote()
+// Interval (함수, 반복기준시간)
 setInterval(getRandomQuote, 5000)
 
 quoteBox.addEventListener("click", getRandomQuote)

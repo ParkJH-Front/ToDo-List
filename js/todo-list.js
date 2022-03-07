@@ -5,6 +5,8 @@ const todoList = document.getElementById("todo-list");
 const TODONAME = "TODONAME";
 let todoArray = []
 
+
+// localStorage 내 JSON 데이터를 저장
 function saveTodo() {
     localStorage.setItem(TODONAME, JSON.stringify(todoArray));
 }
@@ -23,6 +25,7 @@ function todoHandler(event) {
     saveTodo();
 }   
 
+// 실제 todo list의 각 요소들을 생성하는 로직
 function paintTodo(todoObj) {
     const todoli = document.createElement("li");
     todoli.className = "list-group-item border-0"
@@ -42,7 +45,7 @@ function paintTodo(todoObj) {
     todoList.appendChild(todoli);
 }
 
-
+// 삭제 버튼 기능 로직, array.filter 사용 시 type 이 동일해야함
 function deleteTodo(event) {
     const li = event.target.parentElement;
     li.remove();

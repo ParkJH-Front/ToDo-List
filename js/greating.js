@@ -17,7 +17,7 @@ function loginHandler(event) {
     loginFormHandler(loginID)
 };
 
-// 인사 문구 출력 로직s
+// 인사 문구 출력 로직
 function loginFormHandler(USERID) {
     greeting.classList.remove(HIDDEN)
     contents.classList.remove(HIDDEN)

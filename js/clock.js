@@ -11,7 +11,7 @@ function toDay() {
     const Hour = String(time.getHours()).padStart(2, 0)
     const min = String(time.getMinutes()).padStart(2, 0)
     const sec = String(time.getSeconds()).padStart(2, 0)
-    
+    // 실제 출력 텍스트 전달 ``(백틱) 내 값을 넣으면 변수와 텍스트를 편리하게 전달할 수 있다.
     fullTime.innerText = `${year}.${mon}.${day}  ${Hour}:${min}:${sec}`
 }
 
